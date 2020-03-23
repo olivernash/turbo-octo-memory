@@ -1,0 +1,99 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">Important something</h3>
+            <p>You haven't been checking/updating symptoms .... do <a href="google.com">this</a> to keep on top of this...</p>
+          </div>
+      <!-- Change the page title here -->
+      <h1>
+        Check your real-time coronavirus risk
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">This app can help you to protect yourself and the people around you from coronavirus (COVID-19). <br>It could also help stop the spread of coronavirus in your community.</p>
+      <p>It can tell you:</p>
+        <!--<div class="nhsuk-do-dont-list" style="background-color: transparent;">
+          <ul class="nhsuk-list nhsuk-list--tick">
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              Your personal risk of catching coronavirus, based on where you’ve been and who you’ve been in contact with
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              Which high-risk places you should avoid in your area
+            </li>
+            <li>
+              <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+              </svg>
+              What you can do to keep yourself and others safe
+            </li>
+          </ul>
+        </div> -->
+
+      
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li>Your personal risk of catching coronavirus, based on where you’ve been and who you’ve been in contact with</li>
+          <li>Which high-risk places you should avoid in your area</li>
+          <li>What you can do to keep yourself and others safe</li>
+        </ul>
+        <h2 class="nhsuk-heading-l">Data we need</h2>
+        <p>To give you tailored, up-to-date advice, this app will automatically:</p>      
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>Use your location</li>
+            <li>Access your Bluetooth</li>
+          </ul>   
+        <p>We need this information to see when you’re near other people using this app so that we can reduce the spread of coronavirus (COVID-19). </p>
+        <p>This information never leaves your phone.</p>
+        <p>You can remove the data at any time by deleting this app.</p>
+        <div class="nhsuk-checkboxes">
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+              I agree to share my data with the NHS to help understand how coronavirus is spreading
+            </label>
+          </div>
+        </div>
+        <br>
+
+        <form action="symptoms-radio" method="post">
+            <button class="nhsuk-button" type="submit">
+              Start now
+            </button>
+        </form>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Timed out, you will need to start again – How is coronvirus affecting you – NHS.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-xl">You have been away from your device for 30 minutes</h1>
+
+        <p class="nhsuk-body">
+          For security reasons, we can't save what you have done so far. You will need to start again. 
+        </p>
+        <p class="nhsuk-body">
+          
+        </p>
+      {{ button({
+        "text": "Start again",
+        "href": "#"
+      }) }}
+      
+    </div>
+  </div>
+
+{% endblock %}
